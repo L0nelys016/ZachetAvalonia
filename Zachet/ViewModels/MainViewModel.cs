@@ -1,9 +1,10 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.EntityFrameworkCore;
 using Zachet.Models;
 
 namespace Zachet.ViewModels
@@ -14,7 +15,7 @@ namespace Zachet.ViewModels
         private readonly ProductType _allProductType = new ProductType()
         {
             TypeId = 0,
-            TypeName = "Все типы"
+            TypeName = "Все типы",
         };
 
         [ObservableProperty]
@@ -43,11 +44,9 @@ namespace Zachet.ViewModels
             _ = Initialize();
         }
 
-        partial void OnSearcheTextChanged(string? value) =>
-            _ = ApplyFilter();
+        partial void OnSearcheTextChanged(string? value) => _ = ApplyFilter();
 
-        partial void OnSelectedProductTypeChanged(ProductType? value) =>
-            _ = ApplyFilter();
+        partial void OnSelectedProductTypeChanged(ProductType? value) => _ = ApplyFilter();
 
         private async Task Initialize()
         {
@@ -56,9 +55,46 @@ namespace Zachet.ViewModels
             await LoadProductTypes();
         }
 
+        [RelayCommand]
+        private void UpdateProduct()
+        {
+            if (SelectedProduct is null)
+                return;
+
+            MainWindowViewModel.Instace.CurrentViewModel = new CreateAndEditProductViewModel(
+                true,
+                SelectedProduct.Id
+            );
+        }
+
+        [RelayCommand]
+        private void AddProduct() =>
+            MainWindowViewModel.Instace.CurrentViewModel = new CreateAndEditProductViewModel(false);
+
+        [RelayCommand]
+        private async Task DeleteProduct()
+        {
+            if (SelectedProduct is null)
+                return;
+
+            Product? product = await _db.Products.FirstOrDefaultAsync(p =>
+                p.Id == SelectedProduct.Id
+            );
+
+            if (product == null)
+                return;
+
+            _db.Products.Remove(product);
+            _db.SaveChanges();
+
+            Products.Remove(product);
+            SelectedProduct = null;
+        }
+
         private async Task LoadProducts()
         {
-            List<Product> productsDb = await _db.Products.AsNoTracking()
+            List<Product> productsDb = await _db
+                .Products.AsNoTracking()
                 .Include(p => p.Material)
                 .Include(p => p.Type)
                 .ToListAsync();

@@ -45,17 +45,20 @@
                         Height="28"
                         Content="Изменить"
                         HorizontalContentAlignment="Center"
-                        Background="#355CBD"/>
+                        Background="#355CBD"
+                        Command="{Binding UpdateProductCommand}"/>
                 <Button Width="85" 
                         Height="28"
                         Content="Удалить"
                         HorizontalContentAlignment="Center"
-                        Background="#355CBD"/>
+                        Background="#355CBD"
+                        Command="{Binding DeleteProductCommand}"/>
                 <Button Width="85" 
                         Height="28"
                         Content="Добавить"
                         HorizontalContentAlignment="Center"
-                        Background="#355CBD"/>
+                        Background="#355CBD"
+                        Command="{Binding AddProductCommand}"/>
             </StackPanel>
         </Grid>
 

@@ -9,6 +9,9 @@ namespace Zachet.ViewModels
 
         public static MainWindowViewModel Instace = new();
 
-        public string Greeting { get; } = "Welcome to Avalonia!";
+        public MainWindowViewModel()
+        {
+            Instace = this;
+        }
     }
 }
