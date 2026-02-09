@@ -1,0 +1,110 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="using:Zachet.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Zachet.Views.MainView"
+             x:DataType="vm:MainViewModel">
+
+    <Grid RowDefinitions="auto, *">
+        <Grid Grid.Row="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+        
+
+            <TextBox
+                     Grid.Column="0"
+                     Width="300"
+                     HorizontalAlignment="Left"
+                     Watermark="Поле поиска..."
+                     Text="{Binding SearcheText, Mode=TwoWay}"
+                     Margin="5 5 10 0"/>
+
+            <ComboBox Grid.Column="1"
+                      Width="150"
+                      ItemsSource="{Binding ProductTypes}"
+                      SelectedItem="{Binding SelectedProductType}"
+                      Margin="0 5 0 0">
+                <ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding TypeName}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <StackPanel Grid.Column="2" 
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal"
+                        Spacing="10">
+				<Button Width="85" 
+                        Height="28"
+                        Content="Изменить"
+                        HorizontalContentAlignment="Center"
+                        Background="#355CBD"/>
+                <Button Width="85" 
+                        Height="28"
+                        Content="Удалить"
+                        HorizontalContentAlignment="Center"
+                        Background="#355CBD"/>
+                <Button Width="85" 
+                        Height="28"
+                        Content="Добавить"
+                        HorizontalContentAlignment="Center"
+                        Background="#355CBD"/>
+            </StackPanel>
+        </Grid>
+
+        <ListBox Grid.Row="1" 
+                 ItemsSource="{Binding Products}"
+                 SelectedItem="{Binding SelectedProduct}"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 Background="Transparent">
+            <ListBox.ItemsPanel>
+				<ItemsPanelTemplate>
+					<WrapPanel Orientation="Horizontal" 
+                                ItemHeight="100"
+                                ItemWidth="350"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+            <ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border Background="#D2DFFF"
+                            BorderThickness="2"
+                            BorderBrush="#355CBD"
+                            CornerRadius="8"
+                            Padding="5">
+                        <Grid>
+							<Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>                            
+                                <ColumnDefinition Width="*"/>                            
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+								    <TextBlock Text="{Binding Type.TypeName}"/>
+                                    <TextBlock Text=" | "/>
+								    <TextBlock Text="{Binding ProductName}"/>
+                                </StackPanel>
+
+                                <TextBlock Text="{Binding Article}"/>
+                                <TextBlock Text="{Binding Price}"/>
+                                <TextBlock Text="{Binding Material.MaterialName}"/>
+                            </StackPanel>
+
+                            <TextBlock Grid.Column="1" Text="{Binding ProductionDate}" HorizontalAlignment="Right"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+			
+        </ListBox>
+    </Grid>
+
+</UserControl>

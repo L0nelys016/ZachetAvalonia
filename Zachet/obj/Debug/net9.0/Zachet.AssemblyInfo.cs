@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Zachet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93eddc3dd2165af9ce1de267e97b73bdb6b3a157")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbd1c85b3a032ef7554568a026019830e6b26d22")]
 [assembly: System.Reflection.AssemblyProductAttribute("Zachet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Zachet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

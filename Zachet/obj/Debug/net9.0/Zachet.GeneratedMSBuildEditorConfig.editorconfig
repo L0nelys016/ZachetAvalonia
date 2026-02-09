@@ -34,5 +34,8 @@ build_property.EnableCodeStyleSeverity =
 [A:/Works/ZachetAvalonia/Zachet/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[A:/Works/ZachetAvalonia/Zachet/Views/MainView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [A:/Works/ZachetAvalonia/Zachet/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
