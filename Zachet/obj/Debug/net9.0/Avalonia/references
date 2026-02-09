@@ -26,12 +26,26 @@ C:\Users\artem\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityT
 C:\Users\artem\.nuget\packages\harfbuzzsharp\8.3.1.1\lib\net8.0\HarfBuzzSharp.dll
 C:\Users\artem\.nuget\packages\microcom.runtime\0.11.0\lib\net5.0\MicroCom.Runtime.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\Microsoft.CSharp.dll
+C:\Users\artem\.nuget\packages\microsoft.entityframeworkcore.abstractions\9.0.12\lib\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\artem\.nuget\packages\microsoft.entityframeworkcore\9.0.12\lib\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\artem\.nuget\packages\microsoft.entityframeworkcore.relational\9.0.12\lib\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.caching.abstractions\9.0.12\lib\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.caching.memory\9.0.12\lib\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.configuration.abstractions\9.0.12\lib\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\9.0.12\lib\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.dependencyinjection\9.0.12\lib\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.logging.abstractions\9.0.12\lib\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.logging\9.0.12\lib\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.options\9.0.12\lib\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\artem\.nuget\packages\microsoft.extensions.primitives\9.0.12\lib\net9.0\Microsoft.Extensions.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\Microsoft.VisualBasic.Core.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\Microsoft.VisualBasic.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\Microsoft.Win32.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\Microsoft.Win32.Registry.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\mscorlib.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\netstandard.dll
+C:\Users\artem\.nuget\packages\npgsql\9.0.3\lib\net8.0\Npgsql.dll
+C:\Users\artem\.nuget\packages\npgsql.entityframeworkcore.postgresql\9.0.4\lib\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\artem\.nuget\packages\skiasharp\2.88.9\lib\net6.0\SkiaSharp.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\System.AppContext.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.12\ref\net9.0\System.Buffers.dll
